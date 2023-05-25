@@ -6,39 +6,35 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dmitry Belenky</title>
-	<link rel="stylesheet" href="styles1.css">
-
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body style="background-color: #5cd6d6;">
 
 	<nav>
-		<label class="toggle">
-			<i class="fa fa-bars"></i>
-		</label>
-		<ul>
-			<li><a href="index.html">About Me</a></li>
-			<li><a class="active" href="gallery.html">Gallery</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
+		<div class="nav__content">
 
-		<div class="socialtop">
-			<div class='top-social'>
-				<a href='#'><i class='fa fa-facebook'></i></a>
-				<a href='#'><i class='fa fa-instagram'></i></a>
-				<a href="#"><i class='fa fa-linkedin'></i></a>
+			<label for="check" class="checkbox">
+				<i class="ri-menu-line"></i>
+			</label>
+			<input type="checkbox" name="check" id="check" />
+			<ul>
+				<li><a href="index.html">About Me</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="socialtop">
+				<div class='top-social'>
+					<a href='https://www.facebook.com/dmitriy.belenkiy'><i class='fa fa-facebook'></i></a>
+					<a href='https://www.instagram.com/_dimany4_/'><i class='fa fa-instagram'></i></a>
+					<a href="https://www.linkedin.com/in/dmitry-belenky-697902267/"><i class='fa fa-linkedin'></i></a>
+				</div>
 			</div>
-		</div>
 	</nav>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script>
-		$('.toggle i').click(function () {
-			$('ul').toggleClass("show");
-		});
-	</script>
-	<section></section>
-	<p style="font-size: 30px; text-align: center; padding-top: 20px;">My favorite places</p>
+
+	<p style="font-size: 30px; text-align: center; margin-top: 5rem;">My favorite places</p>
 	<h2 style="text-align: center; padding-top: 20px;">Ukraine</h2>
 	<div class="ukraine">
 		<img src="images/Ukraine/1.jpg" alt="Kiev1">
