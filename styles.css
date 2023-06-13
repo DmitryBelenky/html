@@ -25,7 +25,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    background: #D3D3D3;
+    background: linear-gradient(270deg, #D3D3D3, #969697);
 
 
 }
@@ -69,14 +69,14 @@ ul li a {
     border: 2px solid transparent;
     text-decoration: none;
     font-weight: 600;
-    color: var(--text-dark);
-    transition: 0.3s;
+    color: #111;
+    transition: 0.s;
 }
 
 ul li a:hover {
-
-    border-bottom-color: #1f2937;
-    color: #1f2937;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    color: #fff;
 
 }
 
@@ -97,6 +97,7 @@ ul li a:hover {
     width: 35px;
     height: 35px;
     color: #111;
+
 }
 
 /*.top-social a:hover::before {
@@ -115,17 +116,17 @@ ul li a:hover {
 
 .section {
     background-color: #5cd6d6;
-
+    /*background: linear-gradient(180deg, #00051e, #04b091);*/
 }
 
 .section__container {
     min-height: 100vh;
     max-width: var(--max-width);
     margin: auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .content {
@@ -134,15 +135,18 @@ ul li a:hover {
     justify-content: center;
 }
 
+
 .subtitle {
 
     font-size: 2.5rem;
     letter-spacing: 2px;
     color: var(--text-light);
     font-weight: 600;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 0.5rem;
 }
+
+
 
 .title {
     font-size: 2.5rem;
@@ -158,17 +162,20 @@ ul li a:hover {
 
 .description {
     font-size: 1.2rem;
+    /* font-weight: 400;*/
     line-height: 1.5rem;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
 }
 
+
+
 .content .btn-box {
 
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    width: 345px;
+    /*margin-top: 20px;*/
+    /*width: 345px;*/
     height: 50px;
 
 }
@@ -180,7 +187,7 @@ ul li a:hover {
     align-items: center;
     width: 150px;
     height: 100%;
-    background: #5cd6d6;
+    background: linear-gradient(270deg, #D3D3D3, #969697);
     border: 2px solid black;
     border-radius: 8px;
     font-size: 19px;
@@ -193,7 +200,7 @@ ul li a:hover {
     box-shadow: 3px 4px 6px 0;
 }
 
-.btn-box a::before {
+/*.btn-box a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -203,7 +210,7 @@ ul li a:hover {
     background: #5cd6d6;
     z-index: -1;
     transition: 0.3s;
-}
+} */
 
 .btn-box a:hover::before {
     width: 100%;
@@ -212,7 +219,7 @@ ul li a:hover {
 .btn-box a:hover {
     color: white;
     border: 2px solid white;
-
+    background: #5cd6d6;
 }
 
 
@@ -223,10 +230,11 @@ ul li a:hover {
 }
 
 .image img {
-    width: min(25rem, 80%);
+    width: min(25rem, 70%);
     border-radius: 50%;
 }
 
+/*----------------------------------------------GALLERY-------------------------------------------------------------*/
 .ukraine,
 .portugal,
 .germany {
@@ -244,10 +252,11 @@ ul li a:hover {
 .portugal img,
 .germany img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
-    background: #fff;
+    /* border: 1px solid #ddd;*/
+    /* border-radius: 8px;*/
+    background: linear-gradient(180deg, #D3D3D3, #969697);
     object-fit: contain;
     /*position: relative;*/
 }
@@ -256,25 +265,38 @@ ul li a:hover {
 .portugal img:hover,
 .germany img:hover {
     z-index: 9;
-    transform: scale(1.6);
+    transform: scale(1.5);
     transition: transform ease 0.5s;
 }
 
+/*-------------full image--------------------------------*/
 
-.contact {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
+.ukraine img.full,
+.portugal img.full,
+.germany img.full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fit;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.ukraine img.full:hover,
+.portugal img.full:hover,
+.germany img.full:hover {
+    z-index: 999;
+    transform: none;
 }
 
 
 /*--------------------------------------CONTACT-----------------------------------------------------*/
 .contact {
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 30px;
+    /*font-weight: 600;*/
     margin-top: 5rem;
 
 }
@@ -320,11 +342,13 @@ ul li a:hover {
 .content1 .left-side .details {
     margin: 14px;
     text-align: center;
+    opacity: 0;
+    animation: slideRight 0.3s ease forwards;
 }
 
 .content1 .left-side .details i {
     font-size: 30px;
-    color: #3e2093;
+    color: #08b4b4;
     margin-bottom: 10px;
 }
 
@@ -336,7 +360,7 @@ ul li a:hover {
 .content1 .left-side .details .text-one,
 .content1 .left-side .details .text-two {
     font-size: 14px;
-    color: #afafb6;
+    color: #8f8f99;
 }
 
 .container .content1 .right-side {
@@ -347,7 +371,7 @@ ul li a:hover {
 .content1 .right-side .topic-text {
     font-size: 23px;
     font-weight: 600;
-    color: #3e2093;
+    color: #08b4b4;
 }
 
 .right-side .input-box {
@@ -383,19 +407,25 @@ ul li a:hover {
 }
 
 .right-side .button input[type="submit"] {
-    color: #fff;
+    color: #111;
     font-size: 18px;
+    font-weight: 600;
     outline: none;
-    border: none;
+    border: 2px solid #111;
     padding: 8px 16px;
     border-radius: 6px;
-    background: #3e2093;
+    background: linear-gradient(270deg, #D3D3D3, #969697);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
+    box-shadow: 3px 4px 6px 0;
 }
 
 .button input[type="submit"]:hover {
-    background: #5029bc;
+    background: #fff;
+    color: #08b4b4;
+    border: 2px solid #08b4b4;
+
+
 }
 
 
@@ -440,6 +470,20 @@ ul li a:hover {
     }
 }
 
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
 /*--------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
 
@@ -448,6 +492,22 @@ ul li a:hover {
     .germany {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .ukraine img,
+    .portugal img,
+    .germany img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .ukraine img:hover,
+    .portugal img:hover,
+    .germany img:hover {
+        z-index: 999;
+        transform: none;
+    }
+
+
 }
 
 @media (width < 750px) {
@@ -462,7 +522,7 @@ ul li a:hover {
         height: calc(45vh - 85px);
         left: -100%;
         top: 55px;
-        background-color: #63adad;
+        background: linear-gradient(270deg, #79797a, #e5e5e5);
         flex-direction: column;
         justify-content: center;
         gap: 1.5rem;
